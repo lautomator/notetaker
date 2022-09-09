@@ -1,0 +1,33 @@
+{
+    "name": "Notetaker",
+    "version": "1.0.0",
+    "description": "These are the build scripts for Notetaker.",
+    "watch": {
+        "sass": {
+            "patterns": ["static/scss"],
+            "extensions": "scss"
+        }
+    },
+    "scripts": {
+        "compile": "sass static/scss/style.scss static/style.css",
+        "jsmin": "minify static/main.js > static/main.min.js",
+        "sass": "sass static/scss/style.scss static/style.css && npm run minify",
+        "minify": "minify static/style.css > static/style.min.css && npm run jsmin",
+        "watch": "npm-watch",
+        "build": "npm run compile && npm run minify"
+    },
+    "repository": {
+        "type": "git",
+        "url": "TODO"
+    },
+    "author": "John Merigliano",
+    "email": "jmerigliano@gmail.com",
+    "url": "localhost/",
+    "license": "ISC",
+    "homepage": "",
+    "dependencies": {
+        "minify": "^9.1.0",
+        "sass": "^1.54.9",
+        "npm-watch": "^0.11.0"
+    }
+}
