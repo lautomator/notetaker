@@ -22,9 +22,9 @@
     },
     "author": "John Merigliano",
     "email": "jmerigliano@gmail.com",
-    "url": "localhost/",
+    "url": "localhost",
     "license": "ISC",
-    "homepage": "",
+    "homepage": "https://github.com/lautomator/notetaker",
     "dependencies": {
         "minify": "^9.1.0",
         "sass": "^1.54.9",

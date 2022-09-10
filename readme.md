@@ -12,9 +12,9 @@ You will need:
 
 * Django
 
-* nodejs v12.22.5
+* nodejs
 
-* npm v6.14.14
+* npm
 
 You can use node [NVM](https://github.com/nvm-sh/nvm#about) -- node version control -- to emulate this environment.
 
@@ -40,27 +40,26 @@ To run the Django server, cd back into the top directory and run `python manage.
 ### CSS and SASS
 Don't edit any `.css` files. The CSS files are auto-generated when you run the build script or watch scripts. Make all edits to the SASS files in `journal/static/scss/` directory.
 
+Make you changes, cd into `journal/` and run `npm run build` to build the styles/scripts. You can also use `npm run watch` to watch files (see `package.json` for all commands).
+
 ### Django Commands
 
-get all of the manage.py commanes:
+Get all of the manage.py commands:
     `python manage.py help`
 
-start a project:
-    `django-admin startproject <project_name>`
-
-run the server:
+Run the server:
     `python manage.py runserver`
 
-create an app:
+Create an app:
     `python manage.py startapp <app_name>`
 
-after creating or editing models:
+Make migrations:
     `python manage.py makemigrations <app_name>`
 
     `python manage.py migrate`
 
-use the shell:
+Use the shell:
     `python manage.py shell`
 
-admin create a superuser:
+Create a superuser:
     `python manage.py createsuperuser`
