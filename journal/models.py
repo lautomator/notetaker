@@ -8,4 +8,4 @@ class Note(models.Model):
     note_archive = models.BooleanField("Archive", default=False)
 
     def __str__(self):
-        return self.note_date + ': ' + self.note_symbol
+        return 'Journaled ' + self.note_symbol

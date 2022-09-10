@@ -30,6 +30,7 @@ You can use node [NVM](https://github.com/nvm-sh/nvm#about) -- node version cont
 Download this repository. To get the virtual environment running, cd into `notetaker` and run `python3 -m venv env`. Check the [Python docs](https://docs.python.org/3/library/venv.html) for more information about the *venv* module.
 
 Run the virtual environment: `. env/bin/activate`.
+Stop the virtual environment: `deactivate`.
 
 Install the dependencies (including Django): `pip install -r requirements.txt`.
 

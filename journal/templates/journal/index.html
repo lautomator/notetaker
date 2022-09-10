@@ -2,6 +2,25 @@
 
 {% block content %}
 
-  <pre>This is the index and will display the (say) 10 latest entries.</pre>
+
+  {% for note in current_notes %}
+    <p>
+      {{ note.note_date }}<br>
+      {{ note.note_symbol }}<br>
+      {{ note.note_text }}<br>
+      {% if note.note_action %}
+        action taken: yes
+      {% else %}
+        action taken: no
+      {% endif %}<br>
+      {% if note.note_archive %}
+        archived: yes
+      {% else %}
+        archived: no
+      {% endif %}
+    </p>
+    <hr>
+  {% endfor %}
+
 
 {% endblock %}
