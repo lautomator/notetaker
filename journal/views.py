@@ -1,3 +1,7 @@
 from django.shortcuts import render
 
-# Create your views here.
+def index(request):
+    context = {
+        'date': '20220910',
+    }
+    return render(request, 'journal/index.html', context)
