@@ -2,8 +2,17 @@
 
 {% block content %}
 
+  <div>
+    <button
+      type="button"
+      id="add_note"
+      class="note-button new-note-button">
+      Add a Note
+    </button>
+  </div>
 
   {% for note in current_notes %}
+    {% if note.note_archive == False %}
     <p>
       {{ note.note_date }}<br>
       {{ note.note_symbol }}<br>
@@ -12,14 +21,20 @@
         action taken: yes
       {% else %}
         action taken: no
-      {% endif %}<br>
-      {% if note.note_archive %}
-        archived: yes
-      {% else %}
-        archived: no
       {% endif %}
+      archived: {{ note.note_archive }}
     </p>
-    <hr>
+
+    <div>
+      <button
+        type="button"
+        class="note-button edit-note-button"
+        value="{{ note.id }}">
+        Edit</button>
+    </div>
+
+    {% endif %}
+
   {% endfor %}
 
 
