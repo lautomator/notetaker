@@ -2,8 +2,10 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    # /journal/
+    # /journal/ or /
     path('', views.index, name='index'),
-    # /journal/20220910/ <year/month/day>
-    # path('<slug:note_date>/', views.entry, name='entry'),
+    # /journal/CRK-2022-09-07/
+    path('journal/<slug:note_slug>/', views.a_note, name='note'),
+
+    # get all note based on a symbol or based on the date or both
 ]

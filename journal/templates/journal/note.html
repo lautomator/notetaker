@@ -1,0 +1,17 @@
+{% extends "./_base.html" %}
+
+{% block content %}
+
+    <p>
+      {{ current_note.note_date }}<br>
+      {{ current_note.note_symbol }}<br>
+      {{ current_note.note_text }}<br>
+      {% if current_note.note_action %}
+        action taken: yes
+      {% else %}
+        action taken: no
+      {% endif %}
+      archived: {{ current_note.note_archive }}
+    </p>
+
+{% endblock %}

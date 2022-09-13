@@ -14,7 +14,7 @@
   {% for note in current_notes %}
     {% if note.note_archive == False %}
     <p>
-      {{ note.note_date }}<br>
+      {{ note.note_date|date:"j/n/Y" }}<br>
       {{ note.note_symbol }}<br>
       {{ note.note_text }}<br>
       {% if note.note_action %}
@@ -30,8 +30,13 @@
         type="button"
         class="note-button edit-note-button"
         value="{{ note.id }}">
-        Edit</button>
+        Edit {{ note.note_symbol }}</button>
     </div>
+
+    <p><a href="{{ note.note_symbol }}-{{ note.note_date|date:'Y-m-d' }}/">
+      {{ note.note_symbol }}-{{ note.note_date|date:'Y-m-d' }}</a></p>
+
+    <p>{{ note.note_date|date:"Y-m-d" }}</p>
 
     {% endif %}
 

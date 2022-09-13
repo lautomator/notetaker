@@ -7,5 +7,9 @@ class Note(models.Model):
     note_action = models.BooleanField("Action Taken", default=False)
     note_archive = models.BooleanField("Archive", default=False)
 
+    @property
+    def note_slug(self):
+        return self.note_symbol + '-' + str(self.note_date)
+
     def __str__(self):
-        return 'Journaled ' + self.note_symbol
+        return self.note_symbol + '-' + str(self.note_date)
